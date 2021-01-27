@@ -6,8 +6,16 @@ function pageLoad() {
 
     // 🔥🔥🔥 YOUR CODE GOES HERE 🔥🔥🔥
     // The variable 'dinner' is already set to the value in the text input
+    
+    let test = dinner == 'tacos'
+    if (test) {
+      console.log('it is true!')
+    }
+
+    
     let output
     output = '🌮'
+    
 
     //  👆 YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE 👆
     /*
