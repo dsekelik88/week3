@@ -24,11 +24,55 @@ let promotion3Icon          // expects a String (emoji)
 // - To generate a random number between 0 and x in Javascript:
 //   Math.floor(Math.random() * x)
 
+
 function pageLoad() {
   // 👇 YOUR CODE BEGINS HERE. DON'T CHANGE ANY OTHER CODE. 👇
 
   // 🔥🔥🔥 YOUR CODE GOES HERE 🔥🔥🔥
   console.log(database)
+
+  numberOfProducts = database.products.length
+  products = database.products
+
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max)) + 1
+  }
+
+  let promo1rand = getRandomInt(9)
+  let promo2rand = getRandomInt(9)
+  let promo3rand = getRandomInt(9)
+
+  promotion1Description = database.promotions[promo1rand].description
+  promotion2Description = database.promotions[promo2rand].description
+  promotion3Description = database.promotions[promo3rand].description
+
+  let promo1randIcon = database.promotions[promo1rand].type
+  let promo2randIcon = database.promotions[promo2rand].type
+  let promo3randIcon = database.promotions[promo3rand].type
+
+  if (promo1randIcon == 'discount') {
+    promotion1Icon = '🤑'
+    } else if (promo1randIcon == 'shipping') {
+      promotion1Icon = '🚛'
+    } else {
+      promotion1Icon = `🎰`
+    }
+
+    if (promo2randIcon == 'discount') {
+      promotion2Icon = '🤑'
+      } else if (promo2randIcon == 'shipping') {
+        promotion2Icon = '🚛'
+      } else {
+        promotion2Icon = `🎰`
+      }
+
+      if (promo3randIcon == 'discount') {
+        promotion3Icon = '🤑'
+        } else if (promo3randIcon == 'shipping') {
+          promotion3Icon = '🚛'
+        } else {
+          promotion3Icon = `🎰`
+        }
 
   //  👆 YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE 👆
 }
